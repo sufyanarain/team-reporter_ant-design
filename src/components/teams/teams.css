@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.createTeamModal{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: aqua !important;
+    background-color: #fff !important;
+    border-radius: ;
+}
