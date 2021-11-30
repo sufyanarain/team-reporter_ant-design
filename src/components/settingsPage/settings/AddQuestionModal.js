@@ -9,8 +9,11 @@ export const AddQuestionModal = () => {
     currentTeamUid = JSON.parse(currentTeamUid)
 
     const onFinish = (values) => {
+        setDoc(doc(db, 'questions', `${currentTeamUid}`), {
+            q2: values.AddQuestion,
+        })
         console.log('Success:', values);
-        setIsModalVisible(false);
+        // setIsModalVisible(false);
     };
 
     const onFinishFailed = (errorInfo) => {
@@ -48,8 +51,8 @@ export const AddQuestionModal = () => {
                     autoComplete="off"
                 >
                     <Form.Item
-                        label="AddQuestion"
-                        name="Add Question"
+                        label="Add Question"
+                        name="AddQuestion"
                         rules={[{ required: true, message: 'Please Add question!' }]}
                     >
                         <Input />
